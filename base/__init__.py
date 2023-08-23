@@ -7,3 +7,4 @@ from .base_dataset import BaseDataset
 from .base_dataloader import BaseDataLoader
 from .base_datamodule import BaseDataModule
 from .base_model import BaseModel
+from .base_callback import BaseCallback
