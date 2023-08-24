@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2023-08-20
 # @Author  : Zhaoze Wang
-# @Site    : https://github.com/Wangzhaoze/BFNPL
+# @Site    : https://github.com/Wangzhaoze/BNFPL
 # @File    : base_dataloader.py
 # @IDE     : vscode
 
