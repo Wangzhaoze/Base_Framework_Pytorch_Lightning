@@ -1,4 +1,4 @@
-# BFNPL: Base Framework of Neural Network using Pytorch Lightning
+# Base Framework of Neural Network using Pytorch Lightning
 
 [![GitHub stars](https://img.shields.io/github/stars/Wangzhaoze/UTN_Mobile_Robotics.svg)](https://github.com/Wangzhaoze/UTN_Mobile_Robotics/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Wangzhaoze/UTN_Mobile_Robotics.svg)](https://github.com/Wangzhaoze/UTN_Mobile_Robotics/network)
