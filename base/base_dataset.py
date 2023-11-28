@@ -12,10 +12,6 @@ Implement Base Dataset Class
 
 from typing import Any
 from torch.utils.data import Dataset
-import cv2
-import os
-import glob
-import numpy as np
 
 class BaseDataset(Dataset):
     """
@@ -51,3 +47,4 @@ class BaseDataset(Dataset):
             NotImplementedError: If not overridden by the derived class.
         """
         raise NotImplementedError("Must implement __getitem__() method in the derived class.")
+    
