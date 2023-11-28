@@ -11,6 +11,7 @@ Implement Base PyTorch Lightning DataModule Class
 """
 
 import pytorch_lightning as pl
+from torch.utils.data import DataLoader, Dataset
 
 class BaseDataModule(pl.LightningDataModule):
     """
@@ -19,6 +20,10 @@ class BaseDataModule(pl.LightningDataModule):
     This class provides a foundation for custom data modules in PyTorch Lightning.
     Derived classes can override its methods to customize the data loading and processing behavior.
     """
+    def __init__(self, train_dataset: Dataset, val_dataset: Dataset) -> None:
+        super().__init__()
+        self.train_dataset = train_dataset
+        self.val_dataset = val_dataset
 
     def prepare_data(self):
         """
@@ -34,7 +39,7 @@ class BaseDataModule(pl.LightningDataModule):
             stage (str): One of 'fit' (train), 'validate', 'test', or None.
         """
 
-    def train_dataloader(self):
+    def train_dataloader(self) -> DataLoader:
         """
         Return a DataLoader for training.
 
@@ -42,7 +47,7 @@ class BaseDataModule(pl.LightningDataModule):
             DataLoader: A DataLoader instance for training data.
         """
 
-    def val_dataloader(self):
+    def val_dataloader(self) -> DataLoader:
         """
         Return a DataLoader for validation.
 
