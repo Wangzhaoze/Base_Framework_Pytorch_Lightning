@@ -23,8 +23,8 @@ class BaseDataLoader(DataLoader):
     """
 
     def __init__(self,
-                 dataset: Dataset,
-                 batch_size: int,
+                 dataset: Dataset = None,
+                 batch_size: int = 1,
                  shuffle: bool = True,
                  num_workers: int = 0):
         """
@@ -37,4 +37,9 @@ class BaseDataLoader(DataLoader):
             num_workers (int): Number of worker threads used for data loading. Default is 0.
         """
         # Call the constructor of the parent DataLoader class
-        super().__init__(dataset, batch_size=batch_size, shuffle=shuffle, num_workers=num_workers)
+        super().__init__(
+            dataset=dataset,
+            batch_size=batch_size,
+            shuffle=shuffle,
+            num_workers=num_workers
+            )
