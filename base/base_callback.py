@@ -30,7 +30,7 @@ class BaseCallback(pl.Callback):
         """
         super().__init__()
 
-    def on_validation_epoch_start(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
+    def on_validation_epoch_start(self, trainer: pl.Trainer, pl_module: pl.LightningModule) -> None:
         """
         Called when a validation epoch begins.
 
@@ -42,7 +42,7 @@ class BaseCallback(pl.Callback):
             None
         """
 
-    def on_validation_epoch_end(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
+    def on_validation_epoch_end(self, trainer: pl.Trainer, pl_module: pl.LightningModule) -> None:
         """
         Called when a validation epoch ends.
 
@@ -54,7 +54,7 @@ class BaseCallback(pl.Callback):
             None
         """
 
-    def on_validation_start(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
+    def on_validation_start(self, trainer: pl.Trainer, pl_module: pl.LightningModule) -> None:
         """
         Called when the validation loop begins.
 
@@ -66,7 +66,7 @@ class BaseCallback(pl.Callback):
             None
         """
 
-    def on_validation_end(self, trainer: "pl.Trainer", pl_module: "pl.LightningModule") -> None:
+    def on_validation_end(self, trainer: pl.Trainer, pl_module: pl.LightningModule) -> None:
         """
         Called when the validation loop ends.
 
