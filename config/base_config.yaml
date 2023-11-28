@@ -1,0 +1,30 @@
+### config data module ###
+data_module:
+  _target_: base.BaseDataModule
+
+  train_dataset:
+    _target_: base.BaseDataset
+
+  val_dataset:
+    _target_: base.BaseDataset
+
+  transform:
+    _target_: 
+
+### config network model ###
+model:
+  _target_: base.BaseModel
+
+### config Trainer ###
+trainer:
+  _target_: pytorch_lightning.Trainer
+  max_epochs: 
+  devices: 
+
+  callbacks:
+    - _target_: 
+
+  logger:
+    - _target_: pytorch_lightning.loggers.TensorBoardLogger
+      save_dir: 
+      name: 

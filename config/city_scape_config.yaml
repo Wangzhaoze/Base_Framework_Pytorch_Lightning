@@ -1,0 +1,26 @@
+### config data module ###
+data_module:
+  _target_: data_module.CityScapeDataModule
+  data_dir: './data/CityScapes'
+  class_name: 'aachen'
+  batch_size: 1
+
+
+### config network model ###
+model:
+  _target_: models.CityScapeModel
+
+
+### config Trainer ###
+trainer:
+  _target_: pytorch_lightning.Trainer
+  max_epochs: 20
+  devices: 'auto'
+
+  callbacks:
+    - _target_: callbacks.PlotImageSegmentation
+
+  logger:
+    - _target_: pytorch_lightning.loggers.TensorBoardLogger
+      save_dir: "logs"
+      name: "city_scape"
