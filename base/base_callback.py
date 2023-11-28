@@ -24,12 +24,6 @@ class BaseCallback(pl.Callback):
         
     """
 
-    def __init__(self) -> None:
-        """
-        Initializes a new instance of the BaseCallback class.
-        """
-        super().__init__()
-
     def on_validation_epoch_start(self, trainer: pl.Trainer, pl_module: pl.LightningModule) -> None:
         """
         Called when a validation epoch begins.
