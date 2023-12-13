@@ -10,9 +10,11 @@
 Implement Base Model Class
 """
 
-from typing import Any, Union, Dict
-import torch
+from typing import Any, Dict, Union
+
 import pytorch_lightning as pl
+import torch
+
 
 class BaseModel(pl.LightningModule):
     """
@@ -40,7 +42,9 @@ class BaseModel(pl.LightningModule):
             torch.Tensor: Output tensor.
         """
 
-    def training_step(self, *args: Any, **kwargs: Any) -> Union[torch.Tensor, Dict[str, Any]]:
+    def training_step(
+        self, *args: Any, **kwargs: Any
+    ) -> Union[torch.Tensor, Dict[str, Any]]:
         """
         Define a single training step on the training set.
 
@@ -49,7 +53,9 @@ class BaseModel(pl.LightningModule):
             the training loss and other optional items.
         """
 
-    def validation_step(self, *args: Any, **kwargs: Any) -> Union[torch.Tensor, Dict[str, Any]]:
+    def validation_step(
+        self, *args: Any, **kwargs: Any
+    ) -> Union[torch.Tensor, Dict[str, Any]]:
         """
         Define a single validation step on the validation set.
 
@@ -58,7 +64,9 @@ class BaseModel(pl.LightningModule):
             the validation loss and other optional items.
         """
 
-    def test_step(self, *args: Any, **kwargs: Any) -> Union[torch.Tensor, Dict[str, Any]]:
+    def test_step(
+        self, *args: Any, **kwargs: Any
+    ) -> Union[torch.Tensor, Dict[str, Any]]:
         """
         Define a single testing step on the test set.
 

@@ -10,8 +10,8 @@
 Implement Base Dataloader Class
 """
 
-from torch.utils.data import Dataset
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Dataset
+
 
 class BaseDataLoader(DataLoader):
     """
@@ -22,11 +22,13 @@ class BaseDataLoader(DataLoader):
     to customize the data loading behavior.
     """
 
-    def __init__(self,
-                 dataset: Dataset = None,
-                 batch_size: int = 1,
-                 shuffle: bool = True,
-                 num_workers: int = 0):
+    def __init__(
+        self,
+        dataset: Dataset = None,
+        batch_size: int = 1,
+        shuffle: bool = True,
+        num_workers: int = 0,
+    ):
         """
         Initializes a new instance of the BaseDataLoader class.
 
@@ -41,5 +43,5 @@ class BaseDataLoader(DataLoader):
             dataset=dataset,
             batch_size=batch_size,
             shuffle=shuffle,
-            num_workers=num_workers
-            )
+            num_workers=num_workers,
+        )
