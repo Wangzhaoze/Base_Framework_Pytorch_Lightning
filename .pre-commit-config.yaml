@@ -16,3 +16,10 @@ repos:
 #     -   id: pylint
 # ci:
 #   skip: [pylint]
+
+
+
+# pre-commit run --all-files
+# git add ..
+# git commit -m ""
+# git push origin main
