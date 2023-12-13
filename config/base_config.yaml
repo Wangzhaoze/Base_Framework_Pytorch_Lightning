@@ -9,7 +9,7 @@ data_module:
     _target_: base.BaseDataset
 
   transform:
-    _target_: 
+    _target_:
 
 ### config network model ###
 model:
@@ -18,13 +18,13 @@ model:
 ### config Trainer ###
 trainer:
   _target_: pytorch_lightning.Trainer
-  max_epochs: 
-  devices: 
+  max_epochs:
+  devices:
 
   callbacks:
-    - _target_: 
+    - _target_:
 
   logger:
     - _target_: pytorch_lightning.loggers.TensorBoardLogger
-      save_dir: 
-      name: 
+      save_dir:
+      name:

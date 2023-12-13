@@ -2,17 +2,15 @@
 data_module:
   _target_: data_module.MNIST_DataModule
 
-
 ### config network model ###
 model:
   _target_: models.MNISTModel
-
 
 ### config Trainer ###
 trainer:
   _target_: pytorch_lightning.Trainer
   max_epochs: 10
-  devices: 'auto'
+  devices: "auto"
 
   callbacks:
     - _target_: callbacks.PlotImageClassification
