@@ -1,0 +1,2 @@
+from .mnist_datamodule import MNIST_DataModule
+from .city_scape_datamodule import CityScapeDataModule
